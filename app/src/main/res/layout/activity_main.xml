@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/TextAppearance.App.Headline"
+            app:menu="@menu/menu_main" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:contentPadding="20dp"
+                style="@style/Widget.Material3.CardView.Filled">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/ic_notification"
+                        android:contentDescription="@string/app_name"
+                        app:tint="?attr/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/notification_types_title"
+                        android:textAppearance="@style/TextAppearance.App.Title"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/notification_types_description"
+                        android:textAppearance="@style/TextAppearance.App.Body"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Quick Actions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Actions"
+                android:textAppearance="@style/TextAppearance.App.Title"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Simple Notification -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSimpleNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/simple_notification"
+                app:icon="@drawable/ic_notification"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.TonalButton" />
+
+            <!-- Big Text Notification -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBigTextNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/big_text_notification"
+                app:icon="@drawable/ic_text"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.TonalButton" />
+
+            <!-- Inbox Style Notification -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInboxNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/inbox_style_notification"
+                app:icon="@drawable/ic_inbox"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.TonalButton" />
+
+            <!-- Action Notification -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnActionNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/action_notification"
+                app:icon="@drawable/ic_action"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.TonalButton" />
+
+            <!-- Progress Notification -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProgressNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="@string/progress_notification"
+                app:icon="@drawable/ic_progress"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.TonalButton" />
+
+            <!-- Scheduling Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule Notification"
+                android:textAppearance="@style/TextAppearance.App.Title"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSchedule5Sec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/schedule_in_5_seconds"
+                app:icon="@drawable/ic_schedule"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSchedule10Sec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/schedule_in_10_seconds"
+                app:icon="@drawable/ic_schedule"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScheduleCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule_custom"
+                app:icon="@drawable/ic_calendar"
+                app:cornerRadius="12dp"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Permission Banner -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/permissionBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom"
+        style="@style/Widget.Material3.CardView.Elevated">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/permission_required"
+                android:textAppearance="@style/TextAppearance.App.Title"
+                android:textColor="?attr/colorOnSurface" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Enable notifications to receive alerts and updates"
+                android:textAppearance="@style/TextAppearance.App.Body"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGrantPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/grant_permission"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
