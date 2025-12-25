@@ -82,4 +82,18 @@
     <!-- Empty state -->
     <string name="no_notifications">No notifications yet</string>
     <string name="tap_to_create">Tap the button below to create your first notification</string>
+    
+    <!-- 404 / Not Found -->
+    <string name="not_found_title">Content Not Found</string>
+    <string name="not_found_message">Oops! The content you\'re looking for doesn\'t exist or has been removed.</string>
+    <string name="not_found_error_code">Error 404</string>
+    <string name="suggestions_title">Here\'s what you can do:</string>
+    <string name="suggestion_home">Go to Home</string>
+    <string name="suggestion_notifications">View Notifications</string>
+    <string name="suggestion_settings">Open Settings</string>
+    <string name="suggestion_retry">Try Again</string>
+    <string name="recent_actions_title">Recent Actions</string>
+    <string name="send_simple_notification">Send a Simple Notification</string>
+    <string name="schedule_reminder">Schedule a Reminder</string>
+    <string name="explore_features">Explore Features</string>
 </resources>

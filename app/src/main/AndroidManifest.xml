@@ -38,6 +38,13 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.NotificationApp" />
         
+        <!-- Not Found Activity -->
+        <activity
+            android:name=".NotFoundActivity"
+            android:label="@string/not_found_error_code"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.NotificationApp" />
+        
         <!-- Notification Receiver -->
         <receiver
             android:name=".NotificationReceiver"
